@@ -10,7 +10,6 @@ function App() {
           RECIPE FINDER
         </h1>
       </header>
-      <h3>Dope Project Coming Soon! Stay Tuned</h3>
       <Home />
     </div>
   );
