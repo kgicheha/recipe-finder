@@ -4,7 +4,7 @@ import RecipesContainer from './RecipesContainer';
 import recipesData from '../data/db.json';
 
 const Home = () => {
-  const apiKey = "0645a760d0874352a55b1055ed80fb25"
+  
   
   const [searchWords, setSearchWords] = useState(""); 
   //const [recipes, setRecipes] = useState([]); 
