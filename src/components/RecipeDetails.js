@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 
 function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCount, missedIngredients}) {
-    const [inCart, setInCart] = useState(false);
+    const [inList, setInList] = useState(false);
     const [showDetails, setShowDetails] = useState(false)
 
-    function handleCart() {
-        setInCart((inCart) => inCart = !inCart);
+    function handleList() {
+        setInList((inList) => inList = !inList);
       }
 
       //show Recipe details onClick
@@ -32,7 +32,7 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
         missedIngredients.map((missedIngredient) => (
           <ul>
             <span>{missedIngredient.name}</span>
-            <button className="add" onClick={handleCart}>{inCart ? "Remove From Cart" : "Add To Cart"}</button>
+            <button className="add" onClick={handleList}>{inList ? "Remove From List" : "Add To List"}</button>
           </ul>
         ))
       }
