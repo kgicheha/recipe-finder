@@ -12,7 +12,6 @@ function Recipes({ recipe }) {
     if(!favoriteRecipeList.includes(recipe)) {
       setfavoriteRecipeList([...favoriteRecipeList, recipe])
     }
-
     console.log(favoriteRecipeList)
   }
 
