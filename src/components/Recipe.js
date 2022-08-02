@@ -1,33 +1,35 @@
 import React, { useState } from 'react'
+import FavoriteButton from './FavoriteButton'
+import RecipeDetails from './RecipeDetails'
 
 function Recipes({ recipe }) {
-  const [inCart, setInCart] = useState(false);
 
-  function handleCart() { 
-    setInCart((inCart) => (!inCart));
-  } 
+
+    const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe
+  const [favoriteRecipeList, setfavoriteRecipeList] = useState([])
+
+   //add item to the favorites section
+  const favoriteRecipe = () => {
+    if(!recipe.includes(recipe)) {
+      setfavoriteRecipeList([...favoriteRecipeList, recipe])
+    }
+
+    console.log(favoriteRecipeList)
+  }
 
   return (
-    <li className="card">
-      <h1>{recipe.title}</h1>
-      <img src={recipe.image} alt={recipe.title}/> 
-      <p>Ingredients: Have {recipe.usedIngredientCount} Missing: {recipe.missedIngredientCount}</p> 
-      <ul>
-      {
-        recipe.usedIngredients.map((usedIngredient) => (
-          <li key={usedIngredient.id}>{usedIngredient.name}</li>
-        ))
-      } 
-      {
-        recipe.missedIngredients.map((missedIngredient) => (
-          <li>
-            <span>{missedIngredient.name}</span>
-            <button className="add" onClick={handleCart}>{inCart ? "Remove From Cart" : "Add To Cart"}</button>
-          </li> 
-        ))
-      } 
-      </ul>
-    </li>
+    <ul className="card">
+      <h3>{title}</h3>
+      <img src={image} alt={title}/>
+      <FavoriteButton favoriteRecipe={favoriteRecipe}/>
+      <RecipeDetails
+        key={id}
+        usedIngredientCount ={usedIngredientCount}
+        usedIngredients= {usedIngredients}
+        missedIngredientCount ={missedIngredientCount}
+        missedIngredients= {missedIngredients}
+      />
+    </ul>
   )
 }
 
