@@ -6,12 +6,10 @@ function Recipes({ recipe }) {
 
   const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe
   const [isFavorite, setIsFavorite] = useState(false);
-  
-
+ 
   function onFavoriteClick() {
     setIsFavorite((isfavorite) => (!isfavorite));
     addToFavoritesList(recipe);
-  }
 
   return (
     <ul className="card">

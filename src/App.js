@@ -1,17 +1,21 @@
 import './App.css';
+import NavBar from './components/NavBar'
 import Home from './components/Home';
+import Favorites from './components/Favorites'
+import ShoppingList from './components/ShoppingList';
+import { Route, Routes } from 'react-router-dom';
+
 
 function App() {
-  const apiKey = process.env.REACT_APP_API_KEY
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          RECIPE FINDER
-        </h1>
-      </header>
-      <Home apiKey={apiKey}/>
+      <NavBar />
+      <Routes>
+        <Route path ="/" element ={<Home />} />
+        <Route exact path ="/favorites" element ={<Favorites />} />
+        <Route exact path ="/shoppinglist" element ={<ShoppingList/>} />
+      </Routes>
     </div>
   );
 }

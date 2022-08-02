@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import Form from './Form'
 import RecipesContainer from './RecipesContainer';
-import recipesData from '../data/db.json';
+import recipesData from '../data/testing.json';
 
 
-const Home = ({apiKey}) => {
+const Home = () => {
+  const apiKey = process.env.REACT_APP_API_KEY
 
   const [searchWords, setSearchWords] = useState("");
   // const [recipes, setRecipes] = useState([])
