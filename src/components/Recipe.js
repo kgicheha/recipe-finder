@@ -1,25 +1,24 @@
 import React, { useState } from 'react'
-import AddToFavorites from './AddToFavorites'
+import Favorites from './Favorites'
 import RecipeDetails from './RecipeDetails'
 
 function Recipes({ recipe }) {
 
   const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe
-  const [favoriteRecipeList, setfavoriteRecipeList] = useState([])
-
-  //  add item to the favorites section
-  const favoriteRecipe = () => {
-    if(!favoriteRecipeList.includes(recipe)) {
-      setfavoriteRecipeList([...favoriteRecipeList, recipe])
-    }
-    console.log(favoriteRecipeList)
-  }
+  const [isFavorite, setIsFavorite] = useState(false);
+ 
+  function onFavoriteClick() {
+    setIsFavorite((isfavorite) => (!isfavorite));
+    addToFavoritesList(recipe);
 
   return (
     <ul className="card">
       <h3>{title}</h3>
       <img src={image} alt={title}/>
-      <AddToFavorites favoriteRecipe={favoriteRecipe}/>
+      <Favorites
+        recipe={recipe}
+        addtoFavoritesList={addtoFavoritesList}
+      />
       <RecipeDetails
         key={id}
         usedIngredientCount ={usedIngredientCount}
@@ -27,6 +26,11 @@ function Recipes({ recipe }) {
         missedIngredientCount ={missedIngredientCount}
         missedIngredients= {missedIngredients}
       />
+      {isFavorite ? (
+          <button onClick = {onFavoriteClick} className="emoji-button favorite active">★</button>
+        ) : (
+          <button onClick = {onFavoriteClick} className="emoji-button favorite">☆</button>
+      )}
     </ul>
   )
 }
