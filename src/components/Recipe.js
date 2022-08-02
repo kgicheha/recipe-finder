@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import FavoriteButton from './FavoriteButton'
+import AddToFavorites from './AddToFavorites'
 import RecipeDetails from './RecipeDetails'
 
 function Recipes({ recipe }) {
 
-
-    const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe
+  const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe
   const [favoriteRecipeList, setfavoriteRecipeList] = useState([])
 
-   //add item to the favorites section
+  //  add item to the favorites section
   const favoriteRecipe = () => {
-    if(!recipe.includes(recipe)) {
+    if(!favoriteRecipeList.includes(recipe)) {
       setfavoriteRecipeList([...favoriteRecipeList, recipe])
     }
 
@@ -21,7 +20,7 @@ function Recipes({ recipe }) {
     <ul className="card">
       <h3>{title}</h3>
       <img src={image} alt={title}/>
-      <FavoriteButton favoriteRecipe={favoriteRecipe}/>
+      <AddToFavorites favoriteRecipe={favoriteRecipe}/>
       <RecipeDetails
         key={id}
         usedIngredientCount ={usedIngredientCount}
