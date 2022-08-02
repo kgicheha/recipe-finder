@@ -1,8 +1,8 @@
-import './App.css';
-import NavBar from './components/NavBar'
-import Home from './components/Home';
-import Favorites from './components/Favorites'
-import ShoppingList from './components/ShoppingList';
+import '../App.css';
+import NavBar from './NavBar'
+import Home from './Home';
+import Favorites from './Favorites'
+import ShoppingList from './ShoppingList';
 import { Route, Routes } from 'react-router-dom';
 
 

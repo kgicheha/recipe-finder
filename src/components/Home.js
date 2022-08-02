@@ -12,13 +12,11 @@ const Home = () => {
 
   const recipes = recipesData;
 
-
   function onSubmit(formData) {
     const values = Object.values(formData);
     const valuesFiltered = values.filter((value) => value !== "");
     const valuesTrimmed = valuesFiltered.map((value) => value.trim());
     const valuesString = valuesTrimmed.join(",+");
-    console.log(valuesString);
     setSearchWords(valuesString);
   }
 
