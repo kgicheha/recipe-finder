@@ -6,10 +6,10 @@ function RecipesContainer({ recipes }) {
     <div>
     {
       recipes.map((recipe) => (
-        <Recipe 
+        <Recipe
           key={recipe.id}
           recipe={recipe}
-        /> 
+        />
       ))
     }
     </div>
