@@ -35,4 +35,4 @@ function Recipes({ recipe }) {
   )
 }
 
-export default Recipes
+export default Recipes;
