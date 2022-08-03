@@ -1,39 +1,37 @@
 import React, { useState } from 'react'
-import Favorites from './Favorites'
 import RecipeDetails from './RecipeDetails'
 
-function Recipe({ recipe }) {
-
-  const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe
+function Recipe({ recipe, addToFavoritesList, addToShoppingList  }) {
+  const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe;
   const [isFavorite, setIsFavorite] = useState(false);
- 
-  // function onFavoriteClick() {
-  //   setIsFavorite((isfavorite) => (!isfavorite));
-  //   addToFavoritesList(recipe);
-  // }
+
+  function onFavoriteClick() {
+    setIsFavorite(!isFavorite); 
+    if (isFavorite === true) {
+      console.log("in recipe");
+      addToFavoritesList(recipe);
+    } 
+  }
 
   return (
     <ul className="card">
       <h3>{title}</h3>
       <img src={image} alt={title}/>
-      {/* <Favorites
-        recipe={recipe}
-        addtoFavoritesList={addtoFavoritesList}
-      /> */}
       <RecipeDetails
         key={id}
         usedIngredientCount ={usedIngredientCount}
         usedIngredients= {usedIngredients}
         missedIngredientCount ={missedIngredientCount}
         missedIngredients= {missedIngredients}
+        addToShoppingList= {addToShoppingList}
       />
       {isFavorite ? (
           <button 
-          // onClick = {onFavoriteClick} 
+          onClick = {onFavoriteClick} 
           className="emoji-button favorite active">★</button>
         ) : (
           <button 
-          // onClick = {onFavoriteClick} 
+          onClick = {onFavoriteClick} 
           className="emoji-button favorite">☆</button>
       )}
     </ul>

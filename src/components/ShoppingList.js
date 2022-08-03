@@ -1,9 +1,15 @@
 import React from 'react'
 
-function ShoppingList() {
+function ShoppingList({shoppingList}) {
+  console.log("ShoppingList")
+  const shoppingItems = shoppingList.map((item) => (
+    <h3>{item}</h3>
+))
   return (
-    <div>ShoppingList</div>
-  )
+  <div className="shoppingItems">
+    {shoppingItems}
+  </div>
+)
 }
 
 export default ShoppingList

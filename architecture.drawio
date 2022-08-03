@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="jei3ziQtnrGiw7cNMCDq" name="Page-1">
-        <mxGraphModel dx="749" dy="443" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="554" dy="443" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -43,11 +43,17 @@
                 <mxCell id="12" value="RecipesContainer" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="40" y="320" width="120" height="60" as="geometry"/>
                 </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="14" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="14" value="Recipe" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="40" y="460" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="NavBar" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="710" y="190" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="RecipeDetails" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="600" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
