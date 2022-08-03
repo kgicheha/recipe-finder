@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCount, missedIngredients, addToShoppingList}) {
+
     const [inList, setInList] = useState(false);
     const [showDetails, setShowDetails] = useState(false)
 
@@ -10,18 +11,16 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
         addToShoppingList(event.target.name);
       }
 
-      //show Recipe details onClick
       const handleDetailsOnClick = () => {
         setShowDetails((showDetails) => showDetails = !showDetails )
       }
-  return (
-    <>
-    <button onClick={handleDetailsOnClick}>
-          Ingredients
-    </button>
-    {
-        showDetails ?
-    <>
+      
+      return (
+    <div>
+        <button onClick={handleDetailsOnClick}>Ingredients</button>
+        {showDetails ?
+         </div>
+  )
 
     <p>Ingredients: Have {usedIngredientCount} Missing: {missedIngredientCount}</p>
     <ul>
@@ -40,7 +39,8 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
     : null
     }
     </>
-  )
+
+  
 }
 
 export default RecipeDetails
