@@ -1,7 +1,8 @@
 import React from 'react';
 import Recipe from './Recipe';
 
-function RecipesContainer({ recipes, addToFavoritesList }) {
+function RecipesContainer({ recipes, addToFavoritesList, addToShoppingList }) {
+
   return (
     <div>
     {
@@ -10,6 +11,7 @@ function RecipesContainer({ recipes, addToFavoritesList }) {
           key={recipe.id}
           recipe={recipe}
           addToFavoritesList={addToFavoritesList}
+          addToShoppingList={addToShoppingList}
         />
       ))
     }

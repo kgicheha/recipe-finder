@@ -6,15 +6,20 @@ import Favorites from './Favorites'
 import ShoppingList from './ShoppingList';
 import { Route, Switch } from 'react-router-dom';
 
-
 function App() {
 
   const [favoritesList, setFavoritesList] = useState([]);
- 
+  const [shoppingList, setShoppingList] = useState([]);
+  
   function addToFavoritesList(recipe) {
-    console.log("in app");
     if(!favoritesList.includes(recipe)) {
       setFavoritesList([...favoritesList, recipe])
+    } 
+  }
+
+  function addToShoppingList(item) {
+      if (!shoppingList.includes(item)) {
+      setShoppingList([...shoppingList, item])
     }
   }
 
@@ -27,12 +32,15 @@ function App() {
             favoritesList={favoritesList}
           />
         </Route>
-        <Route exact path="/shoppinglist">
-          <ShoppingList/>
-        </Route>
         <Route exact path="/">
           <Home 
             addToFavoritesList={addToFavoritesList}
+            addToShoppingList={addToShoppingList}
+          />
+        </Route>
+        <Route exact path="/shoppinglist">
+          <ShoppingList 
+            shoppingList={shoppingList}
           />
         </Route>
       </Switch>

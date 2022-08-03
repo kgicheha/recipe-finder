@@ -15,7 +15,6 @@ function NavBar() {
           <NavLink to="/shoppinglist">Shopping List</NavLink>
         </p>
       </ul>
-
     </div>
   )
 }
