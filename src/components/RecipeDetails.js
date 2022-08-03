@@ -18,14 +18,19 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
     {showDetails ?
     <>
     <p>Ingredients: Have {usedIngredientCount} Missing: {missedIngredientCount}</p>
-        <ul>{usedIngredients.map((usedIngredient) => (
-          <ul key={usedIngredient.id}>{usedIngredient.name}
-          </ul>))}{missedIngredients.map((missedIngredient) => (
-          <ul>
+        <ul>
+          { usedIngredients.map((usedIngredient) => (
+          <p key={usedIngredient.id}>
+            {usedIngredient.name}
+          </p>))
+          }
+          { missedIngredients.map((missedIngredient) => (
+          <p key={missedIngredient.id}>
             <span>{missedIngredient.name}</span>
             <button className="add" onClick={handleList}>{inList ? "Remove From List" : "Add To List"}</button>
-          </ul>
-        ))}</ul>
+          </p>))
+        }
+        </ul>
     </>
     : null
     }

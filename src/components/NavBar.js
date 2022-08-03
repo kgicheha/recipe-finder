@@ -5,15 +5,15 @@ function NavBar() {
   return (
     <div>
       <ul>
-        <li>
-          <NavLink to="/">HOME</NavLink>
-        </li>
-        <li>
-          <NavLink to="/favorites">FAVORITES</NavLink>
-        </li>
-        <li>
-          <NavLink to="/shoppinglist">SHOPPING LIST</NavLink>
-        </li>
+        <p>
+          <NavLink to="/">Home</NavLink>
+        </p>
+        <p>
+          <NavLink to="/favorites">Favorites</NavLink>
+        </p>
+        <p>
+          <NavLink to="/shoppinglist">Shopping List</NavLink>
+        </p>
       </ul>
 
     </div>
