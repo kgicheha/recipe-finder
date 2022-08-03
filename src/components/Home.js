@@ -4,7 +4,7 @@ import RecipesContainer from './RecipesContainer';
 import recipesData from '../data/testing.json';
 
 
-const Home = () => {
+const Home = (addToShoppingList) => {
   const apiKey = process.env.REACT_APP_API_KEY
 
   const [searchWords, setSearchWords] = useState("");
@@ -32,6 +32,7 @@ const Home = () => {
       />
       <RecipesContainer
         recipes={recipes}
+        addToShoppingList= {addToShoppingList}
       />
      </div>
   )

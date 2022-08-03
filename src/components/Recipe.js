@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Favorites from './Favorites'
 import RecipeDetails from './RecipeDetails'
 
-function Recipe({ recipe }) {
+function Recipe({ recipe, addToShoppingList }) {
 
   const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe
   const [isFavorite, setIsFavorite] = useState(false);
@@ -26,6 +26,7 @@ function Recipe({ recipe }) {
         usedIngredients= {usedIngredients}
         missedIngredientCount ={missedIngredientCount}
         missedIngredients= {missedIngredients}
+        addToShoppingList= {addToShoppingList}
       />
       {isFavorite ? (
           <button 
