@@ -1,5 +1,5 @@
 import '../App.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from './NavBar'
 import Home from './Home';
 import Favorites from './Favorites'
@@ -10,6 +10,14 @@ function App() {
 
   const [favoritesList, setFavoritesList] = useState([]);
   const [shoppingList, setShoppingList] = useState([]);
+
+  useEffect(() => {
+    console.log(favoritesList);
+  }, [favoritesList]); 
+
+  // useEffect(() => {
+  //   console.log(shoppingList);
+  // }, [shoppingList]);
   
   function addToFavoritesList(recipe) {
     if(!favoritesList.includes(recipe)) {
