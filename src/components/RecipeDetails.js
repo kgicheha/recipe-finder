@@ -16,31 +16,28 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
       }
       
       return (
-    <div>
-        <button onClick={handleDetailsOnClick}>Ingredients</button>
-        {showDetails ?
-         </div>
-  )
-
-    <p>Ingredients: Have {usedIngredientCount} Missing: {missedIngredientCount}</p>
-    <ul>
-          { usedIngredients.map((usedIngredient) => (
-          <p key={usedIngredient.id}>{usedIngredient.name}
-          </p>))
-          }
-          { missedIngredients.map((missedIngredient) => (
-          <p>
-            <span>{missedIngredient.name}</span>
-            <button name={missedIngredient.name} className="add" onClick={handleList}>{inList ? "Remove From List" : "Add To List"}</button>
-          </p>))
+        <div>
+            <button onClick={handleDetailsOnClick}>Ingredients</button>
+            {showDetails ?
+        </div>
+        <p>Ingredients: Have {usedIngredientCount} Missing: {missedIngredientCount}</p>
+        <ul>
+              { usedIngredients.map((usedIngredient) => (
+              <p key={usedIngredient.id}>{usedIngredient.name}
+              </p>))
+              }
+              { missedIngredients.map((missedIngredient) => (
+              <p>
+                <span>{missedIngredient.name}</span>
+                <button name={missedIngredient.name} className="add" onClick={handleList}>{inList ? "Remove From List" : "Add To List"}</button>
+              </p>))
+            }
+        </ul>
+        </>
+        : null
         }
- </ul>
-    </>
-    : null
-    }
-    </>
-
-  
+        </>
+      )
 }
 
 export default RecipeDetails

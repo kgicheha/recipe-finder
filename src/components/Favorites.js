@@ -1,24 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function Favorites({ recipe, addToFavoritesList }) {
-  const {title, image} = recipe;
+function Favorites({ favoritesList }) {
+  //const {title, image} = favoritesList;
 
-  const [favoritesList, setFavoritesList] = useState([]);
+  console.log(favoritesList);
 
-  function addToFavoritesList(recipe) {
-    if(!favoritesList.includes(recipe)) {
-      setFavoritesList([...favoritesList, recipe])
-    }
-  }
-
-  console.log(favoritesList)
+  const favoritesItems = favoritesList.map((recipe) => (
+    <ul className="card">
+      <h3>{recipe.title}</h3>
+      <img src={recipe.image} alt={recipe.title}/> 
+      </ul>
+  ))
 
   return (
     <div className="favorites">
-      <ul className="card">
-      <h3>{title}</h3>
-      <img src={image} alt={title}/> 
-      </ul>
+      {favoritesItems}
     </div>
   )
 }

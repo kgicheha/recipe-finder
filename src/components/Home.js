@@ -3,8 +3,7 @@ import Form from './Form'
 import RecipesContainer from './RecipesContainer';
 import recipesData from '../data/testing.json';
 
-
-const Home = (addToShoppingList) => {
+function Home({ addToFavoritesList, addToShoppingList }) {
   const apiKey = process.env.REACT_APP_API_KEY
 
   const [searchWords, setSearchWords] = useState("");
@@ -31,10 +30,12 @@ const Home = (addToShoppingList) => {
         onSubmit={onSubmit}
       />
       <RecipesContainer
-        recipes={recipes}
-        addToShoppingList= {addToShoppingList}
+        recipes={recipes} 
+        addToFavoritesList={addToFavoritesList}
+        addToShoppingList={addToShoppingList}
       />
      </div>
   )
 }
+
 export default Home
