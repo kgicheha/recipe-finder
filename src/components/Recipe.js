@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import RecipeDetails from './RecipeDetails'
 
 function Recipe({ recipe, addToFavoritesList, addToShoppingList  }) {
@@ -6,25 +6,31 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList  }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   function onFavoriteClick() {
-    setIsFavorite(!isFavorite); 
-    if (isFavorite === true) {
-      console.log("in recipe");
-      addToFavoritesList(recipe);
-    } 
-  }
+    console.log("hi");
+    setIsFavorite((isFavorite) => (!isFavorite));
+
+    console.log(recipe);
+    addToFavoritesList(recipe);
+  } 
+
+  useEffect(() => {
+    console.log(isFavorite);
+  }, [isFavorite]);
 
   return (
-    <ul className="card">
+    <div className="card">
       <h3>{title}</h3>
       <img src={image} alt={title}/>
-      <RecipeDetails
-        key={id}
-        usedIngredientCount ={usedIngredientCount}
-        usedIngredients= {usedIngredients}
-        missedIngredientCount ={missedIngredientCount}
-        missedIngredients= {missedIngredients}
-        addToShoppingList= {addToShoppingList}
-      />
+      <ul className="recipeDetails">
+        <RecipeDetails
+          key={id}
+          usedIngredientCount={usedIngredientCount}
+          usedIngredients={usedIngredients}
+          missedIngredientCount={missedIngredientCount}
+          missedIngredients={missedIngredients}
+          addToShoppingList={addToShoppingList}
+        />
+      </ul>
       {isFavorite ? (
           <button 
           onClick = {onFavoriteClick} 
@@ -34,7 +40,7 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList  }) {
           onClick = {onFavoriteClick} 
           className="emoji-button favorite">☆</button>
       )}
-    </ul>
+    </div>
   )
 }
 

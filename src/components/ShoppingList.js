@@ -1,10 +1,11 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
-function ShoppingList({shoppingList}) {
-  console.log("ShoppingList")
+function ShoppingList({ shoppingList }) {
+
   const shoppingItems = shoppingList.map((item) => (
-    <h3>{item}</h3>
-))
+    <h3 key={uuidv4()}>{item}</h3>
+  ))
   return (
   <div className="shoppingItems">
     {shoppingItems}
