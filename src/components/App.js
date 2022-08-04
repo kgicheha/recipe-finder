@@ -1,4 +1,4 @@
-import '../App.css';
+//import '../App.css';
 import React, { useState } from "react";
 import NavBar from './NavBar'
 import Home from './Home';
@@ -26,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      {/* <img alt="fork" id="fork" src="./image.png"/> */}
       <Switch>
       <Route exact path="/favorites">
           <Favorites 

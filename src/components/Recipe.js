@@ -8,7 +8,6 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList  }) {
   function onFavoriteClick() {
     setIsFavorite(!isFavorite); 
     if (isFavorite === true) {
-      console.log("in recipe");
       addToFavoritesList(recipe);
     } 
   }
@@ -38,5 +37,5 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList  }) {
   )
 }
 
-export default Recipe
+export default Recipe;
 
