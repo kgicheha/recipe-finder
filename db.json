@@ -1,9 +1,4 @@
 {
-    "favorites":[
-
-    ],
-
-    "shoppingList":[
-
-    ]
+  "favorites": [],
+  "shoppinglist": []
 }

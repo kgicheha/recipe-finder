@@ -3,7 +3,7 @@ import Form from './Form'
 import RecipesContainer from './RecipesContainer';
 import recipesData from '../data/testing.json';
 
-function Home({ addToFavoritesList, addToShoppingList }) {
+function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList }) {
   const apiKey = process.env.REACT_APP_API_KEY
 
   const [searchWords, setSearchWords] = useState("");
@@ -30,9 +30,10 @@ function Home({ addToFavoritesList, addToShoppingList }) {
         onSubmit={onSubmit}
       />
       <RecipesContainer
-        recipes={recipes} 
+        recipes={recipes}
         addToFavoritesList={addToFavoritesList}
         addToShoppingList={addToShoppingList}
+        removeFromFavoritesList={removeFromFavoritesList}
       />
      </div>
   )
