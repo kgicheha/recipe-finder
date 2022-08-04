@@ -6,12 +6,21 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList  }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   function onFavoriteClick() {
-    console.log("hi");
+    //CREATE POST ELEMENT
     setIsFavorite((isFavorite) => (!isFavorite));
 
-    console.log(recipe);
-    addToFavoritesList(recipe);
-  } 
+    fetch(`http://localhost:6001/favorites`,{
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(recipe)
+    })
+      .then(resp => resp.json())
+      .then(addToFavoritesList(recipe))
+  }
+
 
   useEffect(() => {
     console.log(isFavorite);
@@ -32,12 +41,12 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList  }) {
         />
       </ul>
       {isFavorite ? (
-          <button 
-          onClick = {onFavoriteClick} 
+          <button
+          onClick = {onFavoriteClick}
           className="emoji-button favorite active">★</button>
         ) : (
-          <button 
-          onClick = {onFavoriteClick} 
+          <button
+          onClick = {onFavoriteClick}
           className="emoji-button favorite">☆</button>
       )}
     </div>

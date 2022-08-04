@@ -1,59 +1,74 @@
 <mxfile host="65bd71144e">
     <diagram id="jei3ziQtnrGiw7cNMCDq" name="Page-1">
-        <mxGraphModel dx="554" dy="443" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="451" dy="396" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="4" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="3">
+                <mxCell id="4" value="" style="edgeStyle=none;html=1;" parent="1" source="2" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="5">
+                <mxCell id="6" value="" style="edgeStyle=none;html=1;" parent="1" source="2" target="5" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="7">
+                <mxCell id="8" value="" style="edgeStyle=none;html=1;" parent="1" source="2" target="7" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="30">
+                <mxCell id="31" value="" style="edgeStyle=none;html=1;" parent="1" source="2" target="30" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="App" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2" value="App" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="365" y="50" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Favorites" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="36" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="FavoritesContainer" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="340" y="190" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="ShoppingList" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="5" value="ShoppingList" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="520" y="190" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="9">
+                <mxCell id="10" value="" style="edgeStyle=none;html=1;" parent="1" source="7" target="9" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="12">
+                <mxCell id="13" value="" style="edgeStyle=none;html=1;" parent="1" source="7" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="Home" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7" value="Home" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="160" y="190" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="Form" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="9" value="Form" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="230" y="320" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="12" target="14">
+                <mxCell id="15" value="" style="edgeStyle=none;html=1;" parent="1" source="12" target="14" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="RecipesContainer" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="12" value="RecipesContainer" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="40" y="320" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="14" target="32">
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;" parent="1" source="14" target="32" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="Recipe" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="14" value="Recipe" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="40" y="460" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="NavBar" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="30" value="NavBar" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="710" y="190" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="RecipeDetails" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="32" value="RecipeDetails" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="40" y="600" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="34" target="37" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="FavoritesCard" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="FavoritesDetail" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="540" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="FaveAddToListButton" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="640" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
