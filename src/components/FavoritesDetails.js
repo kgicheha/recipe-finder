@@ -1,16 +1,15 @@
 import React, {useState} from 'react'
-import AddToListButton from './AddToListButton';
+import FavoritesAddToListButton from './FavoritesAddToListButton'
 
-function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCount, missedIngredients, addToShoppingList}) {
-
+function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredientCount, missedIngredients, addToShoppingList}) {
     const [showDetails, setShowDetails] = useState(false);
 
     function handleDetailsOnClick() {
-      setShowDetails((showDetails) => showDetails = !showDetails )
-    }
+        setShowDetails((showDetails) => showDetails = !showDetails )
+      }
+    return (
+    <div>
 
-      return (
-        <div>
           <button onClick={handleDetailsOnClick}>Ingredients</button>
           { showDetails ?
           <>
@@ -27,7 +26,7 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
               { missedIngredients.map((missedIngredient) => (
               <li key={missedIngredient.id}>
                 <span>{missedIngredient.name}</span>
-                  <AddToListButton
+                  <FavoritesAddToListButton
                     ingredientForButton={missedIngredient.name}
                     addToShoppingList={addToShoppingList}
                   />
@@ -39,8 +38,8 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
           :
               null
           }
-        </div>
-      )
+    </div>
+  )
 }
 
-export default RecipeDetails
+export default FavoritesDetails
