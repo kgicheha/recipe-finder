@@ -41,6 +41,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      {/* <img alt="fork" id="fork" src="./image.png"/> */}
       <Switch>
       <Route exact path="/favorites">
           <FavoritesContainer

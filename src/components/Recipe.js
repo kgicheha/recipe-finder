@@ -36,6 +36,7 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList, removeFromFavor
     console.log(isFavorite);
   }, [isFavorite]);
 
+
   return (
     <div className="card">
       <h3>{title}</h3>
@@ -63,5 +64,5 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList, removeFromFavor
   )
 }
 
-export default Recipe
+export default Recipe;
 

@@ -41,6 +41,5 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
           }
         </div>
       )
-}
-
-export default RecipeDetails
+        }
+export default RecipeDetails;
