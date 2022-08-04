@@ -1,7 +1,7 @@
 import React from 'react';
 import Recipe from './Recipe';
 
-function RecipesContainer({ recipes, addToFavoritesList, addToShoppingList }) {
+function RecipesContainer({ recipes, addToFavoritesList, addToShoppingList, removeFromFavoritesList }) {
 
   return (
     <div>
@@ -12,6 +12,7 @@ function RecipesContainer({ recipes, addToFavoritesList, addToShoppingList }) {
           recipe={recipe}
           addToFavoritesList={addToFavoritesList}
           addToShoppingList={addToShoppingList}
+          removeFromFavoritesList={removeFromFavoritesList}
         />
       ))
     }

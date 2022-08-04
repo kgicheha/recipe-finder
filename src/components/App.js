@@ -29,6 +29,7 @@ function App() {
   // remove items from favoritesList
   function removeFromFavoritesList(id) {
     setFavoritesList(favoritesList => favoritesList.filter((favoriteItem) => favoriteItem.id != id))
+    console.log(id)
   }
 
   function addToShoppingList(item) {
@@ -52,6 +53,7 @@ function App() {
           <Home
             addToFavoritesList={addToFavoritesList}
             addToShoppingList={addToShoppingList}
+            removeFromFavoritesList={removeFromFavoritesList}
           />
         </Route>
         <Route exact path="/shoppinglist">
