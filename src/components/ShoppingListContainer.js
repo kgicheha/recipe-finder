@@ -16,6 +16,7 @@ function ShoppingListContainer({ shoppingList }) {
   ))
   return (
   <div className="shoppingItems" id="shoppingItems">
+     <h2>Shopping List</h2>
     {ShoppingListItems}
   </div>
 )
