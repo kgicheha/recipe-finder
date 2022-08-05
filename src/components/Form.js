@@ -19,7 +19,7 @@ function Form({ onSubmit }) {
     event.preventDefault();
     onSubmit(formData);
   }
-  
+
   return (
     <div className="formContainer">
       <form id="form" onSubmit={handleSubmit}>

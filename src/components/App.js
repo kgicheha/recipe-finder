@@ -33,7 +33,7 @@ function App() {
    // remove items from shopping list
   function removeFromShoppingList(id) {
     setShoppingList(shoppingList => shoppingList.filter((shoppingListItem) => shoppingListItem.id != id))
-  } 
+  }
 
   useEffect(() => {
     console.log(shoppingList)
@@ -43,26 +43,41 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-      <Route exact path="/favorites">
+      <Route exact path="/favorites"
+        render ={() => {
+          return (
           <FavoritesContainer
             favoritesList={favoritesList}
             removeFromFavoritesList={removeFromFavoritesList}
-            addToShoppingList={addToShoppingList} 
+            addToShoppingList={addToShoppingList}
             removeFromShoppingList={removeFromShoppingList}
           />
+          )
+        }}
+      >
         </Route>
-        <Route exact path="/">
+        <Route exact path="/"
+        render ={() => {
+          return (
           <Home
             addToFavoritesList={addToFavoritesList}
             removeFromFavoritesList={removeFromFavoritesList}
             addToShoppingList={addToShoppingList}
-            removeFromShoppingList={removeFromShoppingList} 
+            removeFromShoppingList={removeFromShoppingList}
           />
+          )
+        }}
+        >
       </Route>
-        <Route exact path="/shoppinglist">
+        <Route exact path="/shoppinglist"
+         render ={() => {
+          return (
         <ShoppingListContainer
             shoppingList={shoppingList}
         />
+          )
+         }}
+        >
         </Route>
       </Switch>
     </div>

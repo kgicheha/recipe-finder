@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 
-function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredientCount, missedIngredients, addToShoppingList, removeFromShoppingList}) {
+function FavoritesDetails({recipe, usedIngredientCount,usedIngredients, missedIngredientCount, missedIngredients, addToShoppingList, removeFromShoppingList}) {
     const [showDetails, setShowDetails] = useState(false);
     const [isAddedToList, setIsAddedToList] = useState(false);
 
@@ -13,29 +13,29 @@ function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredient
       setIsAddedToList((isAddedToList) => (!isAddedToList))
     }
 
-    // useEffect(()=>{
-    //   if(isAddedToList ===true) {
-    //     fetch(`http://localhost:6001/shoppinglist`,{
-    //       method: 'POST',
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         "Accept": "application/json"
-    //       },
-    //       body: JSON.stringify(recipe)
-    //     })
-    //     .then(resp => resp.json())
-    //     .then(addToShoppingList(recipe))
+    useEffect(()=>{
+      if(isAddedToList ===true) {
+        fetch(`http://localhost:6001/shoppinglist`,{
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(recipe)
+        })
+        .then(resp => resp.json())
+        .then(addToShoppingList(recipe))
 
-    //   }
-    //   else if (isAddedToList ===false) {
+      }
+      else if (isAddedToList ===false) {
 
-    //       fetch(`http://localhost:6001/shoppinglist/${recipe.id}`, {
-    //         method: "DELETE"
-    //         })
-    //         .then(resp =>resp.json())
-    //         .then(removeFromShoppingList(recipe.id))
-    //   }
-    // }, [isAddedToList])
+          fetch(`http://localhost:6001/shoppinglist/${recipe.id}`, {
+            method: "DELETE"
+            })
+            .then(resp =>resp.json())
+            .then(removeFromShoppingList(recipe.id))
+      }
+    }, [isAddedToList])
 
     return (
     <div>
@@ -57,7 +57,7 @@ function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredient
                 <span id="ing">{missedIngredient.name}</span>
               </li>
               ))
-              } 
+              }
             <button onClick={handleAddToListClick}>
               {isAddedToList ? "Remove All From List" : "Add All to List"}
             </button>
