@@ -23,13 +23,12 @@ function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredient
                 </li>
               ))
               }
+              <button >
+            {isAddedToList ? "Remove All From List" : "Add All to List"}
+            </button>
               { missedIngredients.map((missedIngredient) => (
               <li key={missedIngredient.id}>
                 <span id="ing">{missedIngredient.name}</span>
-                  <FavoritesAddToListButton
-                    ingredientForButton={missedIngredient.name}
-                    addToShoppingList={addToShoppingList}
-                  />
               </li>
               ))
               }
