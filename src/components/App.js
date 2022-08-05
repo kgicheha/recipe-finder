@@ -11,7 +11,6 @@ function App() {
   const [favoritesList, setFavoritesList] = useState([]);
   const [shoppingList, setShoppingList] = useState([]);
 
-
   //add items to favorites list
   function addToFavoritesList(recipe) {
     if(!favoritesList.includes(recipe)) {
@@ -30,23 +29,26 @@ function App() {
       setShoppingList([...shoppingList, recipe])
     }
   }
-  console.log(shoppingList)
 
    // remove items from shopping list
   function removeFromShoppingList(id) {
     setShoppingList(shoppingList => shoppingList.filter((shoppingListItem) => shoppingListItem.id != id))
-  }
+  } 
+
+  useEffect(() => {
+    console.log(shoppingList)
+  }, [shoppingList])
 
   return (
     <div className="App">
       <NavBar />
-      {/* <img alt="fork" id="fork" src="./image.png"/> */}
       <Switch>
       <Route exact path="/favorites">
           <FavoritesContainer
             favoritesList={favoritesList}
             removeFromFavoritesList={removeFromFavoritesList}
-            addToShoppingList={addToShoppingList}
+            addToShoppingList={addToShoppingList} 
+            removeFromShoppingList={removeFromShoppingList}
           />
         </Route>
         <Route exact path="/">
@@ -54,7 +56,7 @@ function App() {
             addToFavoritesList={addToFavoritesList}
             removeFromFavoritesList={removeFromFavoritesList}
             addToShoppingList={addToShoppingList}
-            removeFromShoppingList={removeFromShoppingList}
+            removeFromShoppingList={removeFromShoppingList} 
           />
       </Route>
         <Route exact path="/shoppinglist">

@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import Form from './Form'
 import RecipesContainer from './RecipesContainer';
-import recipesData from '../data/testing.json';
+// import recipesData from '../data/testing.json';
 
 function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList, removeFromShoppingList }) {
   const apiKey = process.env.REACT_APP_API_KEY
   const [searchWords, setSearchWords] = useState("");
-  // const [recipes, setRecipes] = useState([])
-  const recipes = recipesData;
+  const [recipes, setRecipes] = useState([]);
+  
+  // const recipes = recipesData;
 
 
   function onSubmit(formData) {
@@ -18,10 +19,14 @@ function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList, 
     setSearchWords(valuesString);
   }
 
-  // useEffect(() => {
-
-  //   fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=apples,+flour,+sugar&number=2`)
-  // }, [searchWords]);
+  useEffect(() => {
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${searchWords}&number=30`) 
+    .then(res => res.json()) 
+    .then(data => {
+      // console.log(data)
+      setRecipes(data)
+    })
+    }, [searchWords]);
 
   return (
     <div> 

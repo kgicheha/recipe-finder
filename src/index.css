@@ -130,7 +130,8 @@ body {
   border-radius: 10px;
   border-style: solid;
   border-color: orange;
-  display: inline-block;
+  display: inline-block; 
+  object-fit: cover;
 }
 
 li {
@@ -283,4 +284,11 @@ h2 {
   max-height: 600px;
   border-style: solid;
   border-color: orange;
-}
+} 
+
+#pic {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: orange; 
+  object-fit: cover;
+} 
