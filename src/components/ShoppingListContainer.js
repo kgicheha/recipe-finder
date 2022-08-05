@@ -1,23 +1,18 @@
 import React from 'react'
-import { v4 as uuidv4 } from 'uuid';
-import ShoppingListCard from './ShoppingListCard';
+import ShoppingListItems from './ShoppingListItems';
 
 function ShoppingListContainer({ shoppingList }) {
 
-  // console.log(shoppingList)
-  // const shoppingItems = shoppingList.map((item) => (
-  //   <h3 key={uuidv4()}>{item}</h3>
-  // ))
-
-  const ShoppingListItems = shoppingList.map((recipe) => (
-    <ShoppingListCard
+  const shoppingListItems = shoppingList.map((recipe) => (
+    <ShoppingListItems
+      key={recipe.id}
       recipe={recipe}
     />
   ))
+
   return (
-  <div className="shoppingItems" id="shoppingItems">
-     <h2>Shopping List</h2>
-    {ShoppingListItems}
+  <div> 
+      {shoppingListItems}
   </div>
 )
 }

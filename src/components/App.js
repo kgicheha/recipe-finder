@@ -60,7 +60,7 @@ function App() {
         <Route exact path="/shoppinglist">
         <ShoppingListContainer
             shoppingList={shoppingList}
-          />
+        />
         </Route>
       </Switch>
     </div>
