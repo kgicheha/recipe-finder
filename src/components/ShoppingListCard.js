@@ -9,7 +9,6 @@ function ShoppingListCard({recipe}) {
 
   return (
    <div>
-   <h2>Shopping List</h2>
     <ShoppingListDetails
         key= {id}
         missedIngredientsNames={missedIngredientsNames}
