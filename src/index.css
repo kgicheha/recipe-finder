@@ -207,6 +207,7 @@ button {
   border-radius: 10px;
   text-align: center;
 }
+
 .favorites {
   position: relative;
   margin: 20px;
@@ -218,11 +219,68 @@ button {
 .items {
   margin: 1px 0px;
   padding: 1px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 160px;
-  column-gap: 1rem;
   align-items: center;
   border-radius: 10px;
+  text-align: center; 
+} 
+
+.items li {
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+  align-items: center;
+  border-radius: 4px; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
   color: orange;
-  text-align: center;
+}
+
+.items li.in-cart {
+  background: var(--background--light);
+}
+
+.items li.in-cart span {
+  text-decoration: line-through; 
+}
+
+.items button.add {
+  background-color: rgb(214, 158, 73); 
+  color: black; 
+  font-size: 20px;
+}
+
+.items button.remove {
+  background-color: rgb(214, 158, 73); 
+  color: white; 
+  font-size: 20px;
+}
+
+.items li .aisle {
+  justify-self: end;
+  color: var(--font-color-light);
+  font-size: 20px;
+} 
+
+h2 {
+  font-weight: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: large;
+  color: orange;
+  justify-self: center;
+} 
+
+.list-span { 
+  font-size: 25px;
+} 
+
+#blurb {
+  border-radius: 10px;
+  float: right;   
+  margin-top: 120px;
+  margin-right: 60px;;
+  height: auto; 
+  width: auto; 
+  max-width: 600px; 
+  max-height: 600px;
+  border-style: solid;
+  border-color: orange;
 }

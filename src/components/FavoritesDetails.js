@@ -10,7 +10,6 @@ function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredient
       }
     return (
     <div>
-
           <button onClick={handleDetailsOnClick}>Ingredients</button>
           { showDetails ?
           <>
@@ -25,8 +24,8 @@ function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredient
               ))
               }
               <button >
-            {isAddedToList ? "Remove All From List" : "Add All to List"}
-            </button>
+                {isAddedToList ? "Remove All From List" : "Add All to List"}
+              </button>
               { missedIngredients.map((missedIngredient) => (
               <li key={missedIngredient.id}>
                 <span id="ing">{missedIngredient.name}</span>

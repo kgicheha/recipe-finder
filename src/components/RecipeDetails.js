@@ -56,15 +56,15 @@ function RecipeDetails({ recipe, usedIngredientCount,usedIngredients, missedIngr
                 </li>
               ))
               }
-              <button  onClick={handleAddToListClick}>
-      {isAddedToList ? "Remove All From List" : "Add All to List"}
-    </button>
               { missedIngredients.map((missedIngredient) => (
               <li key={missedIngredient.id}>
                 <span>{missedIngredient.name}</span>
               </li>
               ))
               }
+              <button onClick={handleAddToListClick}>
+                {isAddedToList ? "Remove All From List" : "Add All to List"}
+              </button>
           </>
             </>
           :

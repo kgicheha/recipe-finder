@@ -18,18 +18,17 @@ function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList, 
     setSearchWords(valuesString);
   }
 
-
-
   // useEffect(() => {
 
   //   fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=apples,+flour,+sugar&number=2`)
   // }, [searchWords]);
 
   return (
-    <div>
+    <div> 
       <Form
         onSubmit={onSubmit}
-      />
+      /> 
+      <img alt="blurb" id="blurb" src="./Fork it.gif" />
       <RecipesContainer
         recipes={recipes}
         addToFavoritesList={addToFavoritesList}
