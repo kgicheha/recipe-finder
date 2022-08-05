@@ -130,7 +130,7 @@ body {
   border-radius: 10px;
   border-style: solid;
   border-color: orange;
-  display: inline-block; 
+  display: inline-block;
   object-fit: cover;
 }
 
@@ -222,14 +222,14 @@ button {
   padding: 1px;
   align-items: center;
   border-radius: 10px;
-  text-align: center; 
-} 
+  text-align: center;
+}
 
 .items li {
   margin: 0.5rem 0;
   padding: 0.25rem;
   align-items: center;
-  border-radius: 4px; 
+  border-radius: 4px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: larger;
   color: orange;
@@ -240,18 +240,18 @@ button {
 }
 
 .items li.in-cart span {
-  text-decoration: line-through; 
+  text-decoration: line-through;
 }
 
 .items button.add {
-  background-color: rgb(214, 158, 73); 
-  color: black; 
+  background-color: rgb(214, 158, 73);
+  color: black;
   font-size: 20px;
 }
 
 .items button.remove {
-  background-color: rgb(214, 158, 73); 
-  color: white; 
+  background-color: rgb(214, 158, 73);
+  color: white;
   font-size: 20px;
 }
 
@@ -259,7 +259,7 @@ button {
   justify-self: end;
   color: var(--font-color-light);
   font-size: 20px;
-} 
+}
 
 h2 {
   font-weight: 20px;
@@ -267,28 +267,29 @@ h2 {
   font-style: large;
   color: orange;
   justify-self: center;
-} 
+}
 
-.list-span { 
+.list-span {
   font-size: 25px;
-} 
+}
 
 #blurb {
   border-radius: 10px;
-  float: right;   
+  float: right;
   margin-top: 120px;
   margin-right: 60px;;
-  height: auto; 
-  width: auto; 
-  max-width: 600px; 
+  height: auto;
+  width: auto;
+  max-width: 600px;
   max-height: 600px;
   border-style: solid;
   border-color: orange;
-} 
+}
 
 #pic {
   border-radius: 10px;
   border-style: solid;
-  border-color: orange; 
-  object-fit: cover;
-} 
+  border-color: orange;
+  width: 312px;
+  height: 231px;
+}

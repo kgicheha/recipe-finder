@@ -7,7 +7,7 @@ function FavoritesContainer ({ removeFromShoppingList, favoritesList, removeFrom
     <FavoritesCard
       recipe={recipe}
       removeFromFavoritesList={removeFromFavoritesList}
-      addToShoppingList={addToShoppingList} 
+      addToShoppingList={addToShoppingList}
       removeFromShoppingList={removeFromShoppingList}
     />
   ))
