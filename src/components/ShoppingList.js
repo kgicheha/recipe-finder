@@ -6,7 +6,7 @@ function ShoppingList({ shoppingList }) {
     <h3 key={uuidv4()}>{item}</h3>
   ))
   return (
-  <div className="shoppingItems">
+  <div className="shopContainer" id="shoppingItems">
     {shoppingItems}
   </div>
 )

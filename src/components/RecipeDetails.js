@@ -11,10 +11,10 @@ function RecipeDetails({usedIngredientCount,usedIngredients, missedIngredientCou
 
       return (
         <div>
-          <button onClick={handleDetailsOnClick}>Ingredients</button>
+          <button onClick={handleDetailsOnClick}>Ingredients  </button>
           { showDetails ?
           <>
-          <p>Ingredients: Have {usedIngredientCount} Missing: {missedIngredientCount}</p>
+          <p>Ingredients=  Have: {usedIngredientCount}    Missing: {missedIngredientCount}</p>
             <>
               { usedIngredients.map((usedIngredient) => (
                 <li key={usedIngredient.id}>

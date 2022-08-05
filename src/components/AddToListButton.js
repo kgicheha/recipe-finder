@@ -14,7 +14,7 @@ function AddToListButton({ ingredientForButton, addToShoppingList }) {
   }, [isAddedToList])
 
   return (
-    <button value={ingredientForButton} onClick={handleAddToListClick}>
+    <button id="list" value={ingredientForButton["  "]} onClick={handleAddToListClick}>
       {isAddedToList ? "Remove From List" : "Add to List"}
     </button>
   )
