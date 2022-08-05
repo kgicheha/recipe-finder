@@ -29,7 +29,7 @@ function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredient
             </button>
               { missedIngredients.map((missedIngredient) => (
               <li key={missedIngredient.id}>
-                <span>{missedIngredient.name}</span>
+                <span id ="ing">{missedIngredient.name}</span>
               </li>
               ))
               }
