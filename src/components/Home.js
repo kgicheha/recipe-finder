@@ -27,6 +27,7 @@ function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList, 
 
   return (
     <div>
+      <img alt="blurb" id="blurb" src="./Fork it.gif" />
       <Form
         onSubmit={onSubmit}
       />

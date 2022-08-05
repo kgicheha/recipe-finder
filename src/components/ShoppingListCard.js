@@ -5,7 +5,7 @@ function ShoppingListCard({recipe}) {
 
     const {id, missedIngredients} = recipe
 
-    const missedIngredientsNames = missedIngredients.map((missedIngredient) => missedIngredient.name)
+    const missedIngredientsNames = missedIngredients.map((missedIngredient) => missedIngredient.name + (",  "))
 
   return (
    <div>

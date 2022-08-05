@@ -1,9 +1,18 @@
-body {
-  font-style: Courier;
+/* .wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+} */
+
+#root {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   overflow: scroll;
   background-color: rgb(140, 136, 129);
-
+  /* margin-left: auto;
+  margin-right: auto; */
+  height: 100vh;
+  /* width: 960px; */
 }
 
 #navbar {
@@ -21,7 +30,7 @@ body {
   text-decoration: overline;
   font-size: 36px;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #navbar #fave {
@@ -32,7 +41,7 @@ body {
   font-size: 36px;
   float: right;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #navbar #title {
   padding-top: 40px;
@@ -45,7 +54,7 @@ body {
   text-decoration: overline;
   font-size: 36px;
   float: right;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #navbar a:hover {
@@ -69,6 +78,19 @@ body {
   width: 140px;
   height: auto;
   float: left;
+}
+
+#blurb {
+  border-radius: 10px;
+  float: right;   
+  margin-top: 120px;
+  margin-right: 60px;;
+  height: auto; 
+  width: auto; 
+  max-width: 600px; 
+  max-height: 600px;
+  border-style: solid;
+  border-color: orange;
 }
 
 #form {
@@ -109,7 +131,7 @@ body {
 
 .formContainer {
   position: relative;
-  margin: 8% auto;
+  margin: 80px 10px 80px 2px;
   height: 100px;
   width: 70%;
   box-shadow: 15px 20px 16px #333;
@@ -133,8 +155,16 @@ body {
   display: inline-block;
 }
 
+#pic {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: orange;
+}
+
 li {
   list-style-type: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  justify-self: center;
 }
 
 span {
@@ -161,9 +191,24 @@ h3 {
   color: orange;
 }
 
+span {
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 .recipeDetails {
   color: orange;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: left;
+}
+
+#ingredients {
+  position:relative; 
+}
+
+#add {
+  float: right;
 }
 
 button:hover {
@@ -185,28 +230,6 @@ button {
   color: orange
 }
 
-.shopContainer {
-  position: relative;
-  height: 30%;
-  width: 15%;
-  box-shadow: 15px 20px 16px #333;
-  background: #333;
-  padding: 15px 15px 15px 15px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  margin-top: 30px;
-  display: inline-block;
-}
-
-#shoppingItems h3 {
-  list-style-type: square;
-  padding: 20px 20px 10px 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 100px;
-  column-gap: 1rem;
-  border-radius: 10px;
-  text-align: center;
-}
 .favorites {
   position: relative;
   margin: 20px;
@@ -215,14 +238,8 @@ button {
   display: inline-flex;
 }
 
-.items {
-  margin: 1px 0px;
-  padding: 1px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 160px;
-  column-gap: 1rem;
-  align-items: center;
-  border-radius: 10px;
-  color: orange;
-  text-align: center;
+@media screen {
+  body {
+    width: 100%;
+  }
 }

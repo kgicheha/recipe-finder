@@ -40,7 +40,7 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList, removeFromFavor
   return (
     <div className="card">
       <h3>{title}</h3>
-      <img src={image} alt={title}/>
+      <img id="pic" src={image} alt={title}/>
       <ul className="recipeDetails">
         <RecipeDetails
           key={id}
