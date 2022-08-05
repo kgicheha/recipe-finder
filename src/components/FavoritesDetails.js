@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import FavoritesAddToListButton from './FavoritesAddToListButton'
+
 
 function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredientCount, missedIngredients, addToShoppingList}) {
     const [showDetails, setShowDetails] = useState(false);
+    const [isAddedToList, setIsAddedToList] = useState(false);
 
     function handleDetailsOnClick() {
         setShowDetails((showDetails) => showDetails = !showDetails )
@@ -23,13 +24,12 @@ function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredient
                 </li>
               ))
               }
+              <button >
+            {isAddedToList ? "Remove All From List" : "Add All to List"}
+            </button>
               { missedIngredients.map((missedIngredient) => (
               <li key={missedIngredient.id}>
                 <span>{missedIngredient.name}</span>
-                  <FavoritesAddToListButton
-                    ingredientForButton={missedIngredient.name}
-                    addToShoppingList={addToShoppingList}
-                  />
               </li>
               ))
               }
