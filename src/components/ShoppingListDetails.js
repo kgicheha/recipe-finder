@@ -2,8 +2,8 @@ import React from 'react'
 
 const ShoppingListDetails = ({missedIngredientsNames}) => {
   return (
-    <div>
-        <p>{missedIngredientsNames}</p>
+    <div id="shoppingItems">
+        <h3>{missedIngredientsNames}</h3>
     </div>
   )
 }
