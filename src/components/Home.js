@@ -3,13 +3,12 @@ import Form from './Form'
 import RecipesContainer from './RecipesContainer';
 import recipesData from '../data/testing.json';
 
-function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList }) {
+function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList, removeFromShoppingList }) {
   const apiKey = process.env.REACT_APP_API_KEY
-
   const [searchWords, setSearchWords] = useState("");
   // const [recipes, setRecipes] = useState([])
-
   const recipes = recipesData;
+
 
   function onSubmit(formData) {
     const values = Object.values(formData);
@@ -18,6 +17,8 @@ function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList }
     const valuesString = valuesTrimmed.join(",+");
     setSearchWords(valuesString);
   }
+
+
 
   // useEffect(() => {
 
@@ -34,6 +35,7 @@ function Home({ addToFavoritesList, addToShoppingList, removeFromFavoritesList }
         addToFavoritesList={addToFavoritesList}
         addToShoppingList={addToShoppingList}
         removeFromFavoritesList={removeFromFavoritesList}
+        removeFromShoppingList={removeFromShoppingList}
       />
      </div>
   )

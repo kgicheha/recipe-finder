@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from './NavBar'
 import Home from './Home';
 import FavoritesContainer from './FavoritesContainer'
-import ShoppingList from './ShoppingList';
+import ShoppingListContainer from './ShoppingListContainer'
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -11,13 +11,6 @@ function App() {
   const [favoritesList, setFavoritesList] = useState([]);
   const [shoppingList, setShoppingList] = useState([]);
 
-  useEffect(() => {
-    console.log(favoritesList);
-  }, [favoritesList]);
-
-  // useEffect(() => {
-  //   console.log(shoppingList);
-  // }, [shoppingList]);
 
   //add items to favorites list
   function addToFavoritesList(recipe) {
@@ -29,13 +22,19 @@ function App() {
   // remove items from favoritesList
   function removeFromFavoritesList(id) {
     setFavoritesList(favoritesList => favoritesList.filter((favoriteItem) => favoriteItem.id != id))
-    console.log(id)
   }
 
-  function addToShoppingList(item) {
-      if (!shoppingList.includes(item)) {
-      setShoppingList([...shoppingList, item])
+   //add items to shopping list
+  function addToShoppingList(recipe) {
+      if (!shoppingList.includes(recipe)) {
+      setShoppingList([...shoppingList, recipe])
     }
+  }
+  console.log(shoppingList)
+
+   // remove items from shopping list
+  function removeFromShoppingList(id) {
+    setShoppingList(shoppingList => shoppingList.filter((shoppingListItem) => shoppingListItem.id != id))
   }
 
   return (
@@ -53,12 +52,13 @@ function App() {
         <Route exact path="/">
           <Home
             addToFavoritesList={addToFavoritesList}
-            addToShoppingList={addToShoppingList}
             removeFromFavoritesList={removeFromFavoritesList}
+            addToShoppingList={addToShoppingList}
+            removeFromShoppingList={removeFromShoppingList}
           />
-        </Route>
+      </Route>
         <Route exact path="/shoppinglist">
-          <ShoppingList
+        <ShoppingListContainer
             shoppingList={shoppingList}
           />
         </Route>
