@@ -15,7 +15,7 @@ function ShoppingListContainer({ shoppingList }) {
     />
   ))
   return (
-  <div className="shoppingItems">
+  <div className="shoppingItems" id="shoppingItems">
     {ShoppingListItems}
   </div>
 )
