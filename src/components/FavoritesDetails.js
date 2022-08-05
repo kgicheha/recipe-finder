@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import FavoritesAddToListButton from './FavoritesAddToListButton'
+
 
 function FavoritesDetails({usedIngredientCount,usedIngredients, missedIngredientCount, missedIngredients, addToShoppingList}) {
     const [showDetails, setShowDetails] = useState(false);
+    const [isAddedToList, setIsAddedToList] = useState(false);
 
     function handleDetailsOnClick() {
         setShowDetails((showDetails) => showDetails = !showDetails )

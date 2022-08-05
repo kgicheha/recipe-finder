@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import RecipeDetails from './RecipeDetails'
 
-function Recipe({ recipe, addToFavoritesList, addToShoppingList, removeFromFavoritesList  }) {
+function Recipe({ recipe, addToFavoritesList, addToShoppingList, removeFromFavoritesList, removeFromShoppingList }) {
   const {id, title, image, usedIngredientCount, usedIngredients, missedIngredientCount, missedIngredients } = recipe;
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -32,23 +32,25 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList, removeFromFavor
           }
         }, [isFavorite])
 
-  useEffect(() => {
-    console.log(isFavorite);
-  }, [isFavorite]);
+  // useEffect(() => {
+  //   console.log(isFavorite);
+  // }, [isFavorite]);
 
 
   return (
     <div className="card">
       <h3>{title}</h3>
-      <img id="rec" src={image} alt={title}/>
+      <img src={image} alt={title}/>
       <ul className="recipeDetails">
         <RecipeDetails
           key={id}
+          recipe={recipe}
           usedIngredientCount={usedIngredientCount}
           usedIngredients={usedIngredients}
           missedIngredientCount={missedIngredientCount}
           missedIngredients={missedIngredients}
           addToShoppingList={addToShoppingList}
+          removeFromShoppingList={removeFromShoppingList}
         />
       </ul>
       {isFavorite ? (
