@@ -12,7 +12,6 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList, removeFromFavor
 
    useEffect(()=>{
       if(isFavorite ===true) {
-        console.log("Its true")
         fetch(`http://localhost:6001/favorites`,{
           method: 'POST',
           headers: {
@@ -30,17 +29,12 @@ function Recipe({ recipe, addToFavoritesList, addToShoppingList, removeFromFavor
           .then(resp =>resp.json())
           .then(removeFromFavoritesList(id))
           }
-        }, [isFavorite])
-
-  // useEffect(() => {
-  //   console.log(isFavorite);
-  // }, [isFavorite]);
-
+      }, [isFavorite])
 
   return (
     <div className="card">
       <h3>{title}</h3>
-      <img src={image} alt={title}/>
+      <img id="pic" src={image} alt={title}/>
       <ul className="recipeDetails">
         <RecipeDetails
           key={id}

@@ -36,10 +36,7 @@ function RecipeDetails({ recipe, usedIngredientCount,usedIngredients, missedIngr
             .then(resp =>resp.json())
             .then(removeFromShoppingList(recipe.id))
       }
-    },
-    [isAddedToList]
-    )
-
+    }, [isAddedToList])
 
       return (
         <div>
@@ -61,7 +58,7 @@ function RecipeDetails({ recipe, usedIngredientCount,usedIngredients, missedIngr
                 <span>{missedIngredient.name}</span>
               </li>
               ))
-              }
+              } 
               <button onClick={handleAddToListClick}>
                 {isAddedToList ? "Remove All From List" : "Add All to List"}
               </button>
@@ -69,7 +66,7 @@ function RecipeDetails({ recipe, usedIngredientCount,usedIngredients, missedIngr
             </>
           :
               null
-          }
+          } 
         </div>
       )
         }
